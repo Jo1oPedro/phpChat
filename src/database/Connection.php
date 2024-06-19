@@ -22,7 +22,7 @@ class Connection
         if(is_null(self::$pdo)) {
             try {
                 self::$pdo = new \PDO(
-                    "mysql:host=127.0.0.1:5306;dbname=laravel",
+                    "mysql:host=banco_de_dados_relacional;dbname=laravel",
                     "user",
                     "secret",
                     self::OPTIONS

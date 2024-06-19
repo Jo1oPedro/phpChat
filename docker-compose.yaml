@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  chat:
+    container_name: missing-pets-chat
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        PHP_VERSION: '8.3.3-bullseye'
+    networks:
+      - missing-pets_my-shared-network
+    ports:
+      - "8080:8080"
+
+networks:
+  missing-pets_my-shared-network:
+    external: true
